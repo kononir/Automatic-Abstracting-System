@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="by.bsuir.autoabstrsys.controller.ResultsController"
+      fx:id="root"
+      id="root-pane"
+      stylesheets="@/style/main.css">
+    <Text fx:id="stemmingTime"/>
+
+    <Button onAction="#controlSaveToFile">Save</Button>
+
+    <Button onAction="#controlShowingHelp">Show help</Button>
+
+    <Label>Results: </Label>
+    <ScrollPane id="results-scroll">
+        <VBox id="results" fx:id="resultsVBox"/>
+    </ScrollPane>
+</VBox>

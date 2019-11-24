@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      id="root-pane" alignment="CENTER"
+      stylesheets="@/style/main.css">
+    <ImageView>
+        <Image url="@/image/loaded_results_help.png"/>
+    </ImageView>
+    <Label id="image-annotation">
+        1 - Press to show help
+    </Label>
+    <Label id="image-annotation">
+        2 - Results area (a - path, b - classic area, c - sentence, d - keywords area, e - keyword)
+    </Label>
+</VBox>

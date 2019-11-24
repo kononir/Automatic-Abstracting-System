@@ -1,0 +1,29 @@
+#root-pane {
+    -fx-pref-height: 400;
+    -fx-pref-width: 600;
+
+    -fx-spacing: 10px;
+    -fx-padding: 10px;
+
+    -fx-font-family: Georgia;
+    -fx-font-size: 15px;
+}
+
+#result {
+    -fx-border-color: transparent transparent black transparent;
+    -fx-border-width: 2px;
+
+    -fx-padding: 5px;
+    -fx-spacing: 20px;
+}
+
+#results-scroll {
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+
+    -fx-padding: 5px;
+}
+
+#active-link {
+    -fx-fill: green;
+}
