@@ -3,6 +3,8 @@ package by.bsuir.autoabstrsys.service;
 import by.bsuir.autoabstrsys.data.reader.stopwords.impl.JSONStopwordsReader;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public abstract class AbstractAbstractionService implements AbstractionService {
@@ -12,7 +14,8 @@ public abstract class AbstractAbstractionService implements AbstractionService {
 
     protected Map<String, Double> calculateFrequencies(String text) {
         Map<String, Double> result = new LinkedHashMap<>();
-        String[] terms = text.split("[^а-яa-z]");
+        Pattern pattern = Pattern.compile("[^\\w]", Pattern.UNICODE_CHARACTER_CLASS);
+        String[] terms = pattern.split(text);
 
         for (String term : terms) {
             if(!STOP_WORDS.contains(term) && term.length() >= 1){

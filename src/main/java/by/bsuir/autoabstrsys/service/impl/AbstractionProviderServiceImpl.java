@@ -39,7 +39,7 @@ public class AbstractionProviderServiceImpl implements AbstractionProviderServic
     private String getFileContent(File file) {
         try {
             String fileContent = new String(Files.readAllBytes(file.toPath()));
-            Pattern pattern = Pattern.compile("[^\\w0-9.?!:,\\-\\s\\t]", Pattern.UNICODE_CASE);
+            Pattern pattern = Pattern.compile("[^\\w0-9.?!:,\\-\\s\\t]", Pattern.UNICODE_CHARACTER_CLASS);
             Matcher matcher = pattern.matcher(fileContent);
             return matcher.replaceAll("");
         } catch (IOException e) {

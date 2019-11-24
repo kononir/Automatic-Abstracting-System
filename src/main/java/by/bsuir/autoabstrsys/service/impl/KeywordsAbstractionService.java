@@ -16,7 +16,6 @@ public class KeywordsAbstractionService extends AbstractAbstractionService {
 
     @Override
     public List<String> makeAbstraction(String fileContent, List<String> fileContentList) {
-
         Map<String, Double> freqInCurrent = calculateFrequencies(fileContent);
 
         List<Map<String, Double>> allFrequencies = fileContentList.stream()

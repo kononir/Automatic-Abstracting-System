@@ -43,7 +43,9 @@ public class ClassicAbstractionService extends AbstractAbstractionService {
     }
 
     private String[] getParagraphs(String text) {
-        return text.split("\t");
+        return Arrays.stream(text.split("\t"))
+                .filter(paragraph -> !paragraph.isEmpty())
+                .toArray(String[]::new);
     }
 
     private double calculateScore(String sentence, String documentContent, List<String> fileContents) {
